@@ -33,6 +33,53 @@ body {
 	line-height: 1;
 }
 
+/* Language Toggle */
+.language-toggle {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	gap: 20px;
+	background-color: #fff;
+	padding: 6px 12px;
+	border-radius: 30px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+
+.lang-btn {
+	padding: 6px 12px;
+	font-size: 13px;
+	cursor: pointer;
+	background-color: #e0e0e0;
+	border: none;
+	border-radius: 20px;
+	color: #333;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.lang-btn.active {
+	background-color: #4CAF50; /* Màu cho Tiếng Việt */
+	color: white;
+}
+
+.lang-btn:hover {
+	background-color: #d1d1d1;
+}
+
+/* Style for content */
+#content {
+	padding: 20px;
+	margin-top: 80px;
+}
+
+.content-title, .content-description, .content-about {
+	font-size: 18px;
+	color: #333;
+}
+
+
 ol, ul {
 	list-style: none;
 }

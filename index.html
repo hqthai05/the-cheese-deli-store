@@ -13,13 +13,18 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload">
-
 		<!-- Page Wrapper -->
+
 			<div id="page-wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
+						<div class="language-toggle">
+							<button class="lang-btn active" id="vi-btn" onclick="switchLanguage('vi')">Tiếng Việt</button>
+							<button class="lang-btn" id="en-btn" onclick="switchLanguage('en')">English</button>
+						</div>
 						<h1><a href="index.html">Spectral</a></h1>
+
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -30,8 +35,8 @@
 											<li><a href="index.html">About Us</a></li>
 											<li><a href="index.html">Products</a>
 												<ul>
-													<li>Phô mai</li>
-													<li>Xí muội</li>
+													<li><a>Phô mai</a></li>
+													<li><a>Xí muội</a></li>
 												</ul>
 											</li>
 											<li><a href="generic.html">Recipe</a></li>
@@ -48,7 +53,7 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>The Cheese Deli</h2>
-							<p>Where taste meets tradition</p>
+							<p data-vi="Nơi hương vị hòa quyện cùng truyền thống" data-en="Where taste meeets tradition">Where taste meets tradition</p>
 							<ul class="actions special">
 								<li><a href="#" class="button primary">Our Products</a></li>
 							</ul>
@@ -61,8 +66,7 @@
 						<div class="inner">
 							<header class="major">
 								<h2>About Us</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<p>The Cheese Deli specializes in premium cheese and dries plum powders, proudly made in Vietnam. With over four years of experience, we focus on quality and customer trust. Our mission is to deliver products that inspire loyalty through excellence, ensuring every batch reflects our commitment to the finest ingredients.</p>
 							</header>
 							<ul class="icons major">
 								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
@@ -77,13 +81,13 @@
 						<section class="spotlight">
 							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
 								<h2>Cheese Powder</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<p>The Cheese Deli offers three delicious cheese powder options: Premium, Standard and Basic. Each variety is crafted to provide great taste, nutrition, and affordability, perfectly suited to the diverse tastes and culinary preferences of Vietnamese cuisine. Enjoy quality cheese powder for all your favorite dishes!</p>
 							</div>
 						</section>
 						<section class="spotlight">
 							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
 								<h2>Dries Plums Powder</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<p>In addition to our cheese powders, The Cheese Deli offers plum powder, providing a unique flavor option for customers. Perfect for enhancing both food preparation and beverage mixing, it adds a tangy, refreshing taste to a wide variety of dishes and drinks, offering even more versatility in your culinary creations.</p>
 							</div>
 						</section>
 					</section>
@@ -172,6 +176,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/multi-languages.js"></script>
 
 	</body>
 </html>
