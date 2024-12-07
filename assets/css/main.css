@@ -36,24 +36,24 @@ body {
 /* Language Toggle */
 .language-toggle {
 	position: fixed;
-	top: 20px;
-	right: 20px;
+	top: 10px;
+	right: 10px;
 	display: flex;
-	gap: 20px;
+	gap: 10px;
 	background-color: #fff;
-	padding: 6px 12px;
-	border-radius: 30px;
+	padding: 3px 6px;
+	border-radius: 15px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
 }
 
 .lang-btn {
-	padding: 6px 12px;
-	font-size: 13px;
+	padding: 3px 6px;
+	font-size: 6px;
 	cursor: pointer;
 	background-color: #e0e0e0;
 	border: none;
-	border-radius: 20px;
+	border-radius: 10px;
 	color: #333;
 	font-weight: bold;
 	transition: background-color 0.3s ease;
