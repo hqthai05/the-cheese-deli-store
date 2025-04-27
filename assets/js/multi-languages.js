@@ -1,4 +1,16 @@
 // Function to switch between languages
+
+function toggleLanguage() {
+    const checkbox = document.getElementById('language-switch');
+    const label = document.getElementById('lang-label');
+    if (checkbox.checked) {
+        switchLanguage('en');
+        label.textContent = 'EN';
+    } else {
+        switchLanguage('vi');
+        label.textContent = 'VI';
+    }
+}
 function switchLanguage(language) {
     const elements = document.querySelectorAll('[data-en], [data-vi]');
 

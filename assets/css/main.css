@@ -112,42 +112,78 @@ body {
 }
 
 /* Language Toggle */
-.language-toggle {
-    position: fixed;
-    top: 1%;
-    left: 5px;
+.nav-list {
     display: flex;
-    gap: 3px;
-    background-color: #fff;
-    padding: 3px;
-    border-radius: 15px;
-
-    /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); */
-    z-index: 1000;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.lang-btn {
-    padding: 3px 6px;
-    font-size: 6px;
+/* Language toggle wrapper */
+.language-toggle-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Language toggle */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Toggle button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
     cursor: pointer;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 10px;
-    color: #333;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+#language-switch {
+    display: none;
+}
+
+/* Khi checked */
+#language-switch:checked + .switch {
+    background-color: #4CAF50; /* màu nền khi bật */
+}
+
+#language-switch:checked + .switch::before {
+    transform: translateX(24px); /* dịch chuyển tròn khi bật */
+}
+
+/* Label */
+#lang-label {
+    font-size: 14px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-.lang-btn.active {
-    background-color: #4CAF50;
-
-    /* Màu cho Tiếng Việt */
-    color: white;
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 
-.lang-btn:hover {
-    background-color: #d1d1d1;
-}
 
 /* Style for content */
 #content {
