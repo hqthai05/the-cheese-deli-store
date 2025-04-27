@@ -160,11 +160,10 @@ header.major p {
 }
 
 header {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-between;
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    align-items: center;
     padding: 10px 20px;
-    height: 60px;  /* Đảm bảo header có chiều cao */
 }
 
 /* Phần bên trái của header, chứa multi-language */
@@ -176,7 +175,6 @@ header {
 /* Phần bên phải của header, chứa menu */
 .header-right {
     display: flex;
-    align-items: center;
 }
 
 /* Language Toggle */
@@ -199,13 +197,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 25px;  /* Chiều cao của toggle button */
+    width: 50px; /* Độ rộng của toggle button */
+    height: 25px; /* Chiều cao của toggle button */
     background-color: #ccc;
     border-radius: 20px;
     position: relative;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
 }
 
 .thumb {
