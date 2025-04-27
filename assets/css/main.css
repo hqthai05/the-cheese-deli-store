@@ -111,78 +111,132 @@ body {
     line-height: 1;
 }
 
+
+/* Header */
+header p {
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    top: -0.25em;
+}
+
+header h3 + p {
+    font-size: 1.1em;
+}
+
+header h4 + p,
+header h5 + p,
+header h6 + p {
+    font-size: 0.9em;
+}
+
+header.major {
+    margin: 0 0 3.5em 0;
+}
+
+header.major h2,
+header.major h3,
+header.major h4,
+header.major h5,
+header.major h6 {
+    border-bottom: solid 2px #fff;
+    display: inline-block;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+header.major h2:after,
+header.major h3:after,
+header.major h4:after,
+header.major h5:after,
+header.major h6:after {
+    content: '';
+    display: block;
+    height: 1px;
+}
+
+header.major p {
+    color: #fff;
+    top: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px 20px;
+    height: 60px;  /* Đảm bảo header có chiều cao */
+}
+
+/* Phần bên trái của header, chứa multi-language */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Phần bên phải của header, chứa menu */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 /* Language Toggle */
 .nav-list {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    gap: 20px;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
-/* Language toggle wrapper */
+.nav-list li {
+    flex: 1; /* Đảm bảo mỗi mục menu có không gian riêng */
+    text-align: center;
+}
 .language-toggle-wrapper {
-    display: flex;
-    align-items: center;
+    margin-right: 20px; /* Cách menu một khoảng cách cố định */
 }
 
-/* Language toggle */
-.language-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Toggle button */
 .switch {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
-    height: 26px;
+    height: 25px;  /* Chiều cao của toggle button */
     background-color: #ccc;
-    border-radius: 34px;
-    transition: background-color 0.4s;
-    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
-.switch::before {
-    content: "";
+.thumb {
     position: absolute;
-    width: 22px;
-    height: 22px;
-    left: 2px;
-    top: 2px;
-    background-color: white;
+    top: 3px;
+    left: 3px; /* Vị trí của thumb khi không active */
+    width: 18px;  /* Kích thước của thumb */
+    height: 18px; /* Kích thước của thumb */
+    background-color: #fff;
     border-radius: 50%;
-    transition: transform 0.4s;
+    transition: left 0.3s, background-color 0.3s; /* Thêm hiệu ứng chuyển động và màu nền */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#language-switch {
-    display: none;
+input:checked + .switch .thumb {
+    left: 25px; /* Di chuyển thumb sang phải khi active */
 }
 
-/* Khi checked */
-#language-switch:checked + .switch {
-    background-color: #4CAF50; /* màu nền khi bật */
+input:checked + .switch {
+    background-color: #4CAF50; /* Màu nền khi bật */
 }
 
-#language-switch:checked + .switch::before {
-    transform: translateX(24px); /* dịch chuyển tròn khi bật */
+.thumb img {
+    width: 14px; /* Kích thước cờ trong thumb */
+    height: 14px; /* Kích thước cờ trong thumb */
+    object-fit: cover;
 }
 
-/* Label */
-#lang-label {
-    font-size: 14px;
-    font-weight: bold;
-}
 
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-}
 
 
 /* Style for content */
@@ -1936,51 +1990,7 @@ article.special {
     text-align: center;
 }
 
-header p {
-    color: rgba(255, 255, 255, 0.5);
-    position: relative;
-    top: -0.25em;
-}
 
-header h3 + p {
-    font-size: 1.1em;
-}
-
-header h4 + p,
-	header h5 + p,
-	header h6 + p {
-    font-size: 0.9em;
-}
-
-header.major {
-    margin: 0 0 3.5em 0;
-}
-
-header.major h2,
-header.major h3,
-header.major h4,
-header.major h5,
-header.major h6 {
-    border-bottom: solid 2px #fff;
-    display: inline-block;
-    padding-bottom: 1em;
-    position: relative;
-}
-
-header.major h2:after,
-header.major h3:after,
-header.major h4:after,
-header.major h5:after,
-header.major h6:after {
-    content: '';
-    display: block;
-    height: 1px;
-}
-
-header.major p {
-    color: #fff;
-    top: 0;
-}
 
 @media screen and (max-width: 736px) {
     header.major {

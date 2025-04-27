@@ -21,41 +21,47 @@
         <div id="page-wrapper"> 
             <!-- Header -->
             <header id="header" class="alt">
-                <nav id="nav">
-                    <ul class="nav-list">
-                        <!-- Language toggle nằm bên trái -->
-                        <li class="language-toggle-wrapper">
-                            <div class="language-toggle-wrapper">
-                                <label class="language-toggle">
-                                    <input type="checkbox" id="language-switch" onchange="toggleLanguage()">
-                                    <span class="switch"></span>
-                                    <span id="lang-label">VI</span>
-                                </label>
+                <div class="header-left">
+                    <div class="language-toggle-wrapper">
+                        <label class="language-toggle">
+                            <input type="checkbox" id="language-switch" onchange="toggleLanguage()" checked> <!-- mặc định CHECKED -->
+                            <div class="switch">
+                                <div class="thumb">
+                                    <img src="images/vn-flag.png" id="thumb-flag" alt="VN Flag"> <!-- Cờ VN mặc định -->
+                                </div>
                             </div>
-                        </li>
+                        </label>
+                    </div>
+                </div>
 
-                        <!-- Menu toggle và các menu item -->
-                        <li class="special">
-                            <a href="#menu" class="menuToggle" data-en="Menu" data-vi="Danh Mục"><span>Menu</span></a>
-                            <div id="menu">
-                                <ul>
-                                    <li><a href="index.html" data-en="Home" data-vi="Trang Chủ">Home</a></li>
-                                    <li><a href="index.html" data-en="About Us" data-vi="Về Chúng Tôi">About Us</a></li>
-                                    <li>
-                                        <a href="index.html" data-en="Products" data-vi="Sản Phẩm">Products</a>
-                                        <ul>
-                                            <li><a data-en="Cheese Powder" data-vi="Bột Phô Mai">Bột Phô mai</a></li>
-                                            <li><a data-en="Dries Plums Powder" data-vi="Bột Xí Muội">Bột Xí muội</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="generic.html" data-en="Recipes" data-vi="Công Thức">Recipes</a></li>
-                                    <li><a href="elements.html" data-en="Contact Us" data-vi="Liên Hệ">Contact Us</a></li>
-                                    <li><a href="#" data-en="Shopping" data-vi="Mua Sắm">Shopping</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="header-right">
+                    <nav id="nav">
+                        <ul class="nav-list">
+                            <!-- Menu toggle và các menu item -->
+                            <li class="special">
+                                <a href="#menu" class="menuToggle" data-en="Menu" data-vi="Danh Mục"><span>Menu</span></a>
+                                <div id="menu">
+                                    <ul>
+                                        <li><a href="index.html" data-en="Home" data-vi="Trang Chủ">Home</a></li>
+                                        <li><a href="index.html" data-en="About Us" data-vi="Về Chúng Tôi">About Us</a></li>
+                                        <li>
+                                            <a href="index.html" data-en="Products" data-vi="Sản Phẩm">Products</a>
+                                            <ul>
+                                                <li><a data-en="Cheese Powder" data-vi="Bột Phô Mai">Bột Phô mai</a></li>
+                                                <li><a data-en="Dries Plums Powder" data-vi="Bột Xí Muội">Bột Xí muội</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="generic.html" data-en="Recipes" data-vi="Công Thức">Recipes</a></li>
+                                        <li><a href="elements.html" data-en="Contact Us" data-vi="Liên Hệ">Contact Us</a></li>
+                                        <li><a href="#" data-en="Shopping" data-vi="Mua Sắm">Shopping</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
             </header>
             <!-- Banner -->             
             <section id="banner"> 
