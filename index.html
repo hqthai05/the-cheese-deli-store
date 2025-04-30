@@ -14,7 +14,7 @@
         <noscript>
             <link rel="stylesheet" href="assets/css/noscript.css"/>
         </noscript>         
-        <link rel="icon" href="images/logo.jpg" type="image/jpg">
+        <link rel="icon" href="images/logo.png" type="image/jpg">
     </head>     
     <body class="landing is-preload"> 
         <!-- Page Wrapper -->         
@@ -22,6 +22,10 @@
             <!-- Header -->
             <header id="header" class="alt">
                 <div class="header-left">
+                    <!-- Logo có liên kết về index.html -->
+                    <a href="index.html" class="header-logo-link">
+                        <img src="images/logo.png" alt="Logo" class="header-logo">
+                    </a>
                     <div class="language-toggle-wrapper">
                         <label class="language-toggle">
                             <input type="checkbox" id="language-switch" onchange="toggleLanguage()" checked> <!-- mặc định CHECKED -->
@@ -65,7 +69,8 @@
             </header>
             <!-- Banner -->             
             <section id="banner"> 
-                <div class="inner"> 
+                <div class="inner">
+                    <img src="images/logo.png" alt="Logo" class="banner-logo" />
                     <h2>The Cheese Deli</h2> 
                     <p data-vi="Nơi hương vị hòa quyện cùng truyền thống" data-en="Where taste meets tradition">Where taste meets tradition</p> 
                     <ul class="actions special"> 

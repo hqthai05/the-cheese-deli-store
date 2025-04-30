@@ -114,7 +114,7 @@ body {
 
 /* Header */
 header p {
-    color: rgba(255, 255, 255, 0.5);
+    /*color: rgba(255, 255, 255, 0.5);*/
     position: relative;
     top: -0.25em;
 }
@@ -155,21 +155,99 @@ header.major h6:after {
 }
 
 header.major p {
-    color: #fff;
+    /*color: #fff;*/
     top: 0;
 }
 
-header {
-    /*display: flex;*/
+#header {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 1em 1.5em; /* Padding thống nhất */
+    height: 60px; /* Chiều cao cố định cho header */
 }
 
 /* Phần bên trái của header, chứa multi-language */
 .header-left {
     display: flex;
     align-items: center;
+    height: 100%; /* Chiều cao 100% của header */
+}
+
+/* Logo */
+
+/* CSS cho logo trong header */
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Khoảng cách giữa logo và toggle language */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    border-bottom: none; /* Loại bỏ border dưới nếu có */
+    outline: none; /* Loại bỏ outline */
+}
+
+.header-logo {
+    width: 30px; /* Kích thước nhỏ hơn cho mobile */
+    height: 30px;
+    border-radius: 50%; /* Bo tròn logo */
+    object-fit: cover; /* Đảm bảo hình ảnh hiển thị đúng tỷ lệ */
+    transition: transform 0.3s ease; /* Hiệu ứng hover */
+}
+
+.header-logo:hover {
+    transform: scale(1.1); /* Phóng to logo khi hover */
+}
+
+/* Responsive cho logo header */
+@media screen and (min-width: 768px) {
+    .header-logo {
+        width: 35px; /* Kích thước vừa phải hơn trên tablet/desktop */
+        height: 35px;
+    }
+}
+
+/* CSS bổ sung để đảm bảo loại bỏ mọi kiểu hiển thị trên liên kết logo */
+#header .header-logo-link,
+#header .header-logo-link:hover,
+#header .header-logo-link:active,
+#header .header-logo-link:focus {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Nếu vẫn còn vấn đề với template Spectral, thử cách này */
+#header a.header-logo-link {
+    border: none !important;
+    position: relative;
+}
+
+#header a.header-logo-link::after,
+#header a.header-logo-link::before {
+    display: none !important;
+    content: none !important;
+}
+
+.banner-logo {
+    display: block;
+    margin: 0 auto 1em auto;
+    max-width: 100px; /* Mặc định cho điện thoại */
+    height: auto;
+}
+
+/* Khi màn hình từ 768px trở lên (tablet, desktop) */
+@media screen and (min-width: 768px) {
+    .banner-logo {
+        max-width: 380px; /* Tăng kích thước logo trên desktop */
+    }
+}
+
+/* Nếu bạn muốn lớn hơn trên desktop lớn */
+@media screen and (min-width: 1200px) {
+    .banner-logo {
+        max-width: 520px;
+    }
 }
 
 /* Phần bên phải của header, chứa menu */
@@ -190,13 +268,15 @@ header {
     text-align: center;
 }
 .language-toggle-wrapper {
-    margin-right: 20px; /* Cách menu một khoảng cách cố định */
+    display: flex;
+    align-items: center;
 }
 
 .switch {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 7px;
     width: 50px; /* Độ rộng của toggle button */
     height: 25px; /* Chiều cao của toggle button */
     background-color: #ccc;
