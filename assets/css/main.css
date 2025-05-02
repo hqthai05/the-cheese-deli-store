@@ -228,21 +228,22 @@ header.major p {
 .banner-logo {
     display: block;
     margin: 0 auto 1em auto;
-    max-width: 100px;
+    max-width: 180px;
+    width: 100%;
     height: auto;
 }
 
 /* Khi màn hình từ 768px trở lên (tablet, desktop) */
 @media screen and (min-width: 768px) {
     .banner-logo {
-        max-width: 380px;
+        max-width: 420px;
     }
 }
 
 /* Nếu bạn muốn lớn hơn trên desktop lớn */
 @media screen and (min-width: 1200px) {
     .banner-logo {
-        max-width: 520px;
+        max-width: 600px;
     }
 }
 
