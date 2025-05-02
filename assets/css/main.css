@@ -114,7 +114,6 @@ body {
 
 /* Header */
 header p {
-    /*color: rgba(255, 255, 255, 0.5);*/
     position: relative;
     top: -0.25em;
 }
@@ -155,53 +154,50 @@ header.major h6:after {
 }
 
 header.major p {
-    /*color: #fff;*/
     top: 0;
 }
 
 #header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    padding: 1em 1.5em; /* Padding thống nhất */
-    height: 60px; /* Chiều cao cố định cho header */
+    align-items: center;
+    padding: 1em 1.5em;
+    height: 60px;
 }
 
 /* Phần bên trái của header, chứa multi-language */
 .header-left {
     display: flex;
     align-items: center;
-    height: 100%; /* Chiều cao 100% của header */
+    height: 100%;
 }
 
 /* Logo */
-
-/* CSS cho logo trong header */
 .header-logo-link {
     display: flex;
     align-items: center;
-    margin-right: 15px; /* Khoảng cách giữa logo và toggle language */
-    text-decoration: none; /* Loại bỏ gạch chân mặc định */
-    border-bottom: none; /* Loại bỏ border dưới nếu có */
-    outline: none; /* Loại bỏ outline */
+    margin-right: 15px;
+    text-decoration: none;
+    border-bottom: none;
+    outline: none;
 }
 
 .header-logo {
-    width: 30px; /* Kích thước nhỏ hơn cho mobile */
+    width: 30px;
     height: 30px;
-    border-radius: 50%; /* Bo tròn logo */
-    object-fit: cover; /* Đảm bảo hình ảnh hiển thị đúng tỷ lệ */
-    transition: transform 0.3s ease; /* Hiệu ứng hover */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .header-logo:hover {
-    transform: scale(1.1); /* Phóng to logo khi hover */
+    transform: scale(1.1);
 }
 
 /* Responsive cho logo header */
 @media screen and (min-width: 768px) {
     .header-logo {
-        width: 35px; /* Kích thước vừa phải hơn trên tablet/desktop */
+        width: 35px;
         height: 35px;
     }
 }
@@ -232,14 +228,15 @@ header.major p {
 .banner-logo {
     display: block;
     margin: 0 auto 1em auto;
-    max-width: 100px; /* Mặc định cho điện thoại */
+    max-width: 100px;
     height: auto;
+    mix-blend-mode: multiply;
 }
 
 /* Khi màn hình từ 768px trở lên (tablet, desktop) */
 @media screen and (min-width: 768px) {
     .banner-logo {
-        max-width: 380px; /* Tăng kích thước logo trên desktop */
+        max-width: 380px;
     }
 }
 
@@ -264,7 +261,7 @@ header.major p {
 }
 
 .nav-list li {
-    flex: 1; /* Đảm bảo mỗi mục menu có không gian riêng */
+    flex: 1;
     text-align: center;
 }
 .language-toggle-wrapper {
@@ -277,39 +274,39 @@ header.major p {
     justify-content: center;
     align-items: center;
     top: 7px;
-    width: 50px; /* Độ rộng của toggle button */
-    height: 25px; /* Chiều cao của toggle button */
+    width: 50px;
+    height: 25px;
     background-color: #ccc;
     border-radius: 20px;
     position: relative;
-    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    transition: background-color 0.3s ease;
 }
 
 .thumb {
     position: absolute;
     top: 3px;
-    left: 3px; /* Vị trí của thumb khi không active */
-    width: 18px;  /* Kích thước của thumb */
-    height: 18px; /* Kích thước của thumb */
+    left: 3px;
+    width: 18px;
+    height: 18px;
     background-color: #fff;
     border-radius: 50%;
-    transition: left 0.3s, background-color 0.3s; /* Thêm hiệu ứng chuyển động và màu nền */
+    transition: left 0.3s, background-color 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 input:checked + .switch .thumb {
-    left: 25px; /* Di chuyển thumb sang phải khi active */
+    left: 25px;
 }
 
 input:checked + .switch {
-    background-color: #4CAF50; /* Màu nền khi bật */
+    background-color: #4CAF50;
 }
 
 .thumb img {
-    width: 14px; /* Kích thước cờ trong thumb */
-    height: 14px; /* Kích thước cờ trong thumb */
+    width: 14px;
+    height: 14px;
     object-fit: cover;
 }
 
