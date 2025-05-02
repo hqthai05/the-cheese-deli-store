@@ -230,7 +230,6 @@ header.major p {
     margin: 0 auto 1em auto;
     max-width: 100px;
     height: auto;
-    mix-blend-mode: multiply;
 }
 
 /* Khi màn hình từ 768px trở lên (tablet, desktop) */
