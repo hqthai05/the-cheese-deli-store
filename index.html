@@ -14,7 +14,7 @@
         <noscript>
             <link rel="stylesheet" href="assets/css/noscript.css"/>
         </noscript>         
-        <link rel="icon" href="images/logo.png" type="image/jpg">
+        <link rel="icon" href="images/logo-banner.png" type="image/jpg">
     </head>     
     <body class="landing is-preload"> 
         <!-- Page Wrapper -->         
@@ -22,20 +22,30 @@
             <!-- Header -->
             <header id="header" class="alt">
                 <div class="header-left">
-                    <!-- Logo có liên kết về index.html -->
+                    <!-- Logo có liên kết về index.html 
                     <a href="index.html" class="header-logo-link">
                         <img src="images/logo-banner.png" alt="Logo" class="header-logo">
                     </a>
-                    <div class="language-toggle-wrapper">
-                        <label class="language-toggle">
-                            <input type="checkbox" id="language-switch" onchange="toggleLanguage()" checked> <!-- mặc định CHECKED -->
-                            <div class="switch">
-                                <div class="thumb">
-                                    <img src="images/vn-flag.png" id="thumb-flag" alt="VN Flag"> <!-- Cờ VN mặc định -->
-                                </div>
-                            </div>
-                        </label>
+                -->
+                    <div class="language-select-wrapper">
+                        <span id="selected-flag">
+                            <img src="images/flag/vn-flag.png" alt="VN Flag" style="height: 18px; width: 22px; vertical-align: middle;">
+                        </span>
+                        <div class="custom-select-container">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="vi" data-flag="images/flag/vn-flag.png">VN</option>
+                                <option value="en" data-flag="images/flag/uk-flag.png">UK</option>
+                                <!-- Có thể thêm các ngôn ngữ khác ở đây -->
+                            </select>
+                            <span class="custom-arrow">
+                                <!-- SVG mũi tên xuống -->
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                  <path d="M5 8L10 13L15 8" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </div>                 
                     </div>
+                    
                 </div>
 
                 <div class="header-right">

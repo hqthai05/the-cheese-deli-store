@@ -264,53 +264,72 @@ header.major p {
     flex: 1;
     text-align: center;
 }
-.language-toggle-wrapper {
+
+
+
+
+.language-select-wrapper {
     display: flex;
     align-items: center;
+    gap: 8px;
+}
+  
+#language-select {
+    padding: 0px 28px 0px 0px;
+    font-size: 0.8em;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    /* appearance: none; */
+    border: none;
+    outline: none;
 }
 
-.switch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 7px;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 20px;
+.custom-select-container {
     position: relative;
-    transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
-.thumb {
+.custom-arrow {
     position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: left 0.3s, background-color 0.3s;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Để click vẫn vào được select */
     display: flex;
-    justify-content: center;
     align-items: center;
+    height: 100%;
+  }
+
+/* 2. Style cho option khi hover/selected */
+#language-select option {
+    background: #fff;   /* Mặc định: nền trắng, chữ đen */
+    color: #222;
 }
+  
 
-input:checked + .switch .thumb {
-    left: 25px;
-}
+  
+  #selected-flag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+  }
 
-input:checked + .switch {
-    background-color: #4CAF50;
-}
-
-.thumb img {
-    width: 14px;
-    height: 14px;
-    object-fit: cover;
-}
-
-
+  #selected-flag img {
+    height: 20px;             /* Đảm bảo chiều cao flag phù hợp với select */
+    width: auto;
+    display: block;
+  }
+  
+  
+  /* Xóa các style liên quan đến toggle button, ví dụ: */
+  .language-toggle-wrapper,
+  .language-toggle,
+  .language-toggle * {
+    display: none !important;
+  }
 
 
 /* Style for content */
