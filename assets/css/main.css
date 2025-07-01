@@ -2372,15 +2372,17 @@ input[type="radio"] + label:before {
 
 /* Image */
 .image {
-    border-radius: 3px;
     border: 0;
     display: inline-block;
     position: relative;
+    aspect-ratio: 1/1;
 }
 
 .image img {
-    border-radius: 3px;
-    display: block;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .image.left {
